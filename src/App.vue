@@ -1,29 +1,33 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+  <div class="app">
+    <div class="nav" v-if="this.$router.currentRoute.name != 'pedido'">
     </div>
-    <router-view/>
+    <router-view class="conteudo"></router-view>
   </div>
 </template>
 
 <style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css");
+@import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700|Roboto");
+
+//$color-yellow: #ffd740;
+//$color-blue-light: #03a9f4;
+//$color-blue-normal: #0288d1;
+//$color-blue-strong: #0287cf;
+//$height-header: 30px;
+.app {
+  font-family: 'Roboto', sans-serif;
   text-align: center;
   color: #2c3e50;
 }
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+.nav {
+  height: 30px;
+  width: 100vw;
+  background-color: #ffd740;
+}
+
+.conteudo{
+  width: 100vw;
+  background-color: #ebebeb;
 }
 </style>
