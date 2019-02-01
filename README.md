@@ -1,4 +1,4 @@
-# frontend-challange_lojaskd
+# frontend-challenge_lojaskd
 
 ## Project setup
 ```
